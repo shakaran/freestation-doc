@@ -1,0 +1,562 @@
+% -*- coding:utf-8 -*-
+
+%% Para slantsc.sty
+%% sudo apt-get install texlive-latex-extra
+%% sudo apt-get install aspell-es
+
+%% http://es.wikibooks.org/wiki/Manual_de_LaTeX/La_estructura_de_un_documento_en_LaTeX/Clases_de_documento_y_algunos_paquetes_comunes
+\documentclass[a4paper, 12pt, twoside, openright,
+ openany, titlepage, final]{book} %% cleardoublepage=plain,
+\usepackage[left=35mm, right=20mm, top=25mm, bottom=25mm]{geometry}
+\usepackage[utf8]{inputenc} % IMP! Para mantener acentos al seleccionar texto en visor de pdf
+\usepackage[spanish,activeacute]{babel} %paquete necesario: textlive-lang-spanish (para guiones) y texconfig init >log
+\usepackage[scaled]{helvet}
+\usepackage{slantsc}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{fix-cm} %% Avoid LaTeX Font Warning: Font shape
+\usepackage{amssymb,amsmath}
+\usepackage{latexsym}
+\usepackage{relsize}
+\usepackage{etoolbox}
+\usepackage{bookman} % paquete necesario: textlive-font-recommended
+%%\usepackage{times} % Usar Times New Roman
+%% Control the fonts and formatting used in the table of contents.
+
+\usepackage[titles]{tocloft}
+
+%% -- ACRÓNIMOS Y GLOSARIO
+\usepackage[printonlyused,withpage]{acronym} % acronym
+
+\renewcommand*{\acsfont}[1]{\textsc{\textscale{.85}{#1}}} % enunciado del acrónimo: OO
+\renewcommand*{\acfsfont}[1]{#1}
+\renewcommand*{\acffont}[1]{#1}
+
+
+\newcommand\subHalmos{\rule[0.2pt]{2.4pt}{2.4pt}}
+\newcommand\Halmos{\rule[0.4pt]{4pt}{4pt}}
+
+\makeatletter
+  \def\uplabel#1{{\normalfont{$\Halmos$ \textsf{#1}}\hfill}-}
+  %% Fist part
+  \renewenvironment{AC@deflist}[1]%
+    {\ifAC@nolist%
+     \else%
+        \raggedright\begin{list}{}%
+            {
+                \settowidth{\labelwidth}{\normalfont{\textsf{#1}}\hspace*{3em}}%
+                % change 2em to the desired value
+                \setlength{\leftmargin}{\labelwidth}%
+                \addtolength{\leftmargin}{\labelsep}%
+                \setlength{\parskip}{25pt}
+                \setlength{\parindent}{25pt}
+                \renewcommand{\makelabel}{\uplabel}
+            }
+      \fi}%
+    {\ifAC@nolist%
+     \else%
+        \end{list}
+     \fi}%
+\makeatother
+
+\usepackage{fancyhdr} % encabezado
+\usepackage{graphicx} % imagenes
+\usepackage{supertabular} % tablas
+\usepackage{array}
+\usepackage{color}
+\usepackage{hhline}
+\usepackage{setspace} %% For /singlespace
+%%%%%\setlength{\parskip}{2mm plus 0.2mm minus 0.2mm}
+\newcommand\arraybslash{\let\\\@arraycr}
+\usepackage{relsize}  % tamaños relativos para el texto
+\usepackage{ifthen}
+\usepackage[center]{caption} %% Align caption images on center
+\usepackage{url}
+\usepackage{color}
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{color}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage[table]{xcolor} %% Para \rowcolor
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\definecolor{darkblue}{RGB}{79, 100, 128}
+\definecolor{lila}{RGB}{240, 240, 240}
+\definecolor{lilaover}{RGB}{196, 207, 219}
+
+
+%% -- Fundiciones
+\renewcommand{\rmdefault}{ptm}  % times
+\renewcommand{\sfdefault}{lmss} % lmoderm sans sherif
+\renewcommand{\ttdefault}{lmtt} % lmoderm typewriter
+
+\usepackage[htt]{hyphenat}
+%%\usepackage{atbeginend}
+\usepackage{xifthen}
+
+\usepackage{wrapfig}
+
+\usepackage{subfig} % Image composition for figures
+
+%% Párrafos
+% La indentación que precede al párrafo normal debe ser de un
+% cuadratín (1em) (-> 13.4.1.1)
+% \setlength{\parindent}{1.7cm} %% Space for indent the beggining of a paragraph
+\parindent   = 1em
+
+% El espacio en blanco al final de una línea corta debe ser mayor que
+% la indentación del párrafo. (-> 13.4.1.1)
+\parfillskip = 3.5em plus 1fil
+
+% añadir listados, bibliografia, etc a la tabla de contenido
+\usepackage{tocbibind}
+
+\usepackage{hvfloat}
+\usepackage{adjustbox}
+\usepackage{blindtext}
+
+%% -- FORMATO DE CAPÍTULOS Y SECCIONES -----------------------------------------
+\usepackage[rigidchapters, clearempty]{titlesec}
+% - rigidchapters: Todos los títulos de capítulo tienen la misma altura
+% - clearempty: Elimina encabezados y pies de páginas (izquierdas) vacías.
+
+% espaciado entre secciones, subseciones, etc.
+% doc: \titlespacing*{ command }{ left }{ beforesep }{ aftersep }[ right ]
+\titlespacing{\section}{0pt}{5mm}{0mm}
+\titlespacing{\subsection}{0pt}{4mm}{-1mm}
+\titlespacing{\subsubsection}{0pt}{4mm}{-1mm}
+
+\usepackage{tikz}
+
+\newcommand{\chapterformat}[1]{%
+	\begin{tikzpicture}
+      \draw[fill,color=black] (0,0) rectangle (1cm,1cm);
+      \draw[color=white] (0.5cm,0.5cm) node { \thechapter };
+    \end{tikzpicture}
+    \fontsize{14}{14}\selectfont\fontfamily{helvet} \textbf{\uppercase{#1}}
+    
+\hrulefill
+\\
+\newline
+\newline
+
+
+}
+
+
+
+% doc: \titleformat{ command }[ shape ]{ format }{ label }{ sep }{ before }[ after ]
+
+\newcommand{\frontchapterformat}{ 
+  \titleformat{\chapter}[display]%
+    {}
+    {}
+    {0mm}
+    {\thechapter \chapter \chapterformat} 
+
+  \titlespacing{\chapter}{0cm}{2cm}{2cm}
+}
+
+\let\frontmatterorig\frontmatter
+\renewcommand{\frontmatter}{
+  \frontmatterorig
+  \singlespacing
+  \pagestyle{fancy}
+  \frontchapterformat
+  \renewcommand{\chaptermark}[1]{\markboth{\uppercase{##1}}{}}
+  \noindent\hrulefill
+
+\noindent\hrulefill
+}
+
+\newcommand{\mainchapterformat}{
+  \titleformat{\chapter}[display]
+    {\normalfont\large\sffamily}
+    {\chaptertitlename\ \thechapter}
+    {0mm}
+    {\chapterformat}
+  \titlespacing{\chapter}{0cm}{1cm}{3.8cm}
+}
+
+\let\mainmatterorig\mainmatter
+\renewcommand{\mainmatter}{
+  %%\cleardoublepage
+  \mainmatterorig
+  \mainchapterformat
+  %%\pagestyle{fancy}
+  \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\
+  \textsc{##1}}{}}
+  \onehalfspacing
+  %%\cleardoublepage
+}
+
+
+\newcommand{\backchapterformat}{
+  \frontchapterformat
+}
+
+\let\backmatterorig\backmatter
+\renewcommand{\backmatter}{
+  \backmatterorig
+  \backchapterformat
+  \cleardoublepage
+}
+% espaciado entre secciones, subseciones, etc.
+% doc: \titlespacing*{ command }{ left }{ beforesep }{ aftersep }[ right ]
+\titlespacing{\section}{0pt}{5mm}{0mm}
+\titlespacing{\subsection}{0pt}{4mm}{-1mm}
+\titlespacing{\subsubsection}{0pt}{4mm}{-1mm}
+
+
+% Listar codigo fuente
+%% Copiar carpeta tex en /usr/share/texmf/tex/
+%% wget http://www.ctan.org/install/macros/latex/contrib/oberdiek.tds.zip
+%%\usepackage{listingsutf8}[2007/11/11] 
+\usepackage{listings}
+%%\usepackage{listing}
+
+% or code_color_gray.tex
+\input{src/templates/code_color_purple.tex}
+ 
+% minimizar fragmentado de listados
+\lstnewenvironment{listing}[1][]
+   {\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
+ 
+\lstdefinestyle{consola}
+   {basicstyle=\scriptsize\bf\ttfamily,
+    backgroundcolor=\color{gray75},
+   }
+ 
+\lstdefinestyle{C}{language=C,}
+
+\makeindex % Indice
+
+%% David Villa: solución con \vspace
+\newcommand{\pretitle}
+{%
+    \thispagestyle{empty}%
+    \begin{center}%
+        \vspace*{\stretch{3.2}}%
+        {
+            %% Imagen
+            \begin{figure}[ht]
+                \begin{center}
+                    \includegraphics[scale=0.5]{src/img/escudo-esi.png} 
+                \end{center}
+            \end{figure}
+            
+            \fontsize{26}{26}
+            \selectfont
+            \begin{center}
+                Universidad de Castilla-La Mancha
+                Escuela Superior de Informática
+            \end{center}
+            
+            % Subtitulo
+            \fontsize{18}{18}
+            \selectfont
+            \textbf{{\csubtitle}}\\
+            [.9cm]
+            
+            %Titulo
+            \fontsize{22}{22}
+            \selectfont
+            \textbf{{\ctitle}}\\ 
+            [1.5cm]
+            \pfcdesc\\
+            [1.5cm]
+            
+            % Fecha
+            \fontsize{9}{9}
+            \selectfont
+             \textbf{\cdate}\\
+            [4.5cm]
+                
+            % Autores
+            \fontsize{12}{12}
+            \selectfont
+            \cauthor
+            \manager
+             
+            
+        \vspace*{\stretch{6.8}}%
+        }
+    \end{center}%
+    \vfill
+    \null
+    %%\cleardoublepage
+}
+
+\newcommand{\putlogo}
+{
+    \includegraphics[width=35mm]{src/img/escudo-esi-monocromo.png}
+}
+
+\newcommand{\publishmonth}{}
+\newcommand{\publishyear}{\year}
+
+\newcommand{\publishdate}[2]{%
+  \renewcommand{\publishyear}{#1}
+  \renewcommand{\publishmonth}{#2}}
+  
+\newcommand{\frontpage}
+{
+  \pagestyle{empty}
+  \thispagestyle{empty}
+  \begin{center}
+    \putlogo
+    \vspace{25mm}\\
+    {\Large \textbf{UNIVERSIDAD DE CASTILLA-LA MANCHA}} \\
+    \bigskip
+    {\Large \textbf{ESCUELA SUPERIOR DE INFORMÁTICA}} \\
+    \vspace{25mm}
+    {\Large \textbf{INGENIERÍA}} \\
+    \bigskip
+    {\Large \textbf{EN INFORMÁTICA}} \\
+    \vspace{30mm}
+    {\Large \textbf{PROYECTO FIN DE CARRERA}} \\
+    \vspace{14mm}
+
+    \begin{doublespace}
+      {\Large FreeStation. Plataforma para el desarrollo de sistemas de
+      distribución de software libre en puntos de información}
+    \end{doublespace}
+
+    \vspace{12mm}
+    {\large Ángel Guzmán Maeso}\\
+    \vfill
+    \hfill
+    {\large \textbf{\publishmonth, \publishyear}}
+  \end{center}
+  \pagestyle{plain} 
+\thispagestyle{empty}
+  \cleardoublepage
+  \thispagestyle{empty}
+  
+  \pagenumbering{roman}
+  \setcounter{tocdepth}{1}
+  \setcounter{secnumdepth}{3} %% Sets the depth to number sections
+  \setcounter{page}{1}
+  
+  \begin{center}
+    \putlogo
+    \vspace{15mm}\\
+    {\Large \textbf{UNIVERSIDAD DE CASTILLA-LA MANCHA}} \\
+    \bigskip
+    {\Large \textbf{ESCUELA SUPERIOR DE INFORMÁTICA}}\\
+    \vspace{14mm}
+    {\Large Departamento de Tecnologías y Sistemas de Información}\\
+    \vspace{45mm}
+    {\Large \textbf{PROYECTO FIN DE CARRERA}} \\
+    \bigskip
+
+    \begin{doublespace}
+      {\Large FreeStation. Plataforma para el desarrollo de sistemas de
+      distribución de software libre en puntos de información}\\
+    \end{doublespace}
+  \end{center}
+
+  \vspace{25mm}
+
+  \begin{onehalfspace}
+  \begin{flushleft}
+    {\large Autor:\hspace{5mm} Ángel Guzmán Maeso}\\
+    {\large Director: Carlos González Morcillo}\\
+  \end{flushleft}
+  \end{onehalfspace}
+  
+  \vfill
+  \hfill
+  {\large \textbf{\publishmonth, \publishyear}}
+  
+  \newpage
+  
+  \begin{minipage}[c][5cm][c]{1em}   % Introduce espacio en blanco efectivo
+  \end{minipage}
+  %\thispagestyle{empty}
+  \newpage
+}
+
+%%\setlist{nolistsep}
+\newenvironment{custom_itemize}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+  \addtolength{\itemsep}{-0.20\baselineskip}
+}{\end{itemize}}
+
+\newenvironment{custom_enumerate}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+  \addtolength{\itemsep}{-0.20\baselineskip}
+}{\end{enumerate}}
+
+\setlength{\headheight}{16pt}
+
+\newcommand{\address}[1]{\renewcommand{\address}{#1}}
+\newcommand{\mcity}{Ciudad Real}
+\newcommand{\city}[1]{\renewcommand{\mcity}{#1}}
+
+\newcommand{\country}[1]{\renewcommand{\country}{#1}}
+\newcommand{\phone}[1]{\newcommand{\mphone}{#1}}
+\newcommand{\email}[1]{\newcommand{\memail}{#1}}
+\newcommand{\homepage}[1]{\newcommand{\mhomepage}{#1}}
+
+\newcommand{\license}{%
+ %%\thispagestyle{empty}%
+ %%\label{licensemini}
+  \begin{minipage}{1.0\textwidth}
+    \begin{singlespace}
+      Permission is granted to copy, distribute and/or modify this
+      document under the terms of the GNU Free Documentation License,
+      Version 1.3 or any later version published by the Free Software
+      Foundation; with no Invariant Sections, no Front-Cover Texts,
+      and no Back-Cover Texts.  A copy of the license is included in
+      the section entitled \hyperlink{chap:GFDL}{"GNU Free
+        Documentation License"}.
+
+      \smallskip
+      Se permite la copia, distribución y/o modificación de este
+      documento bajo los términos de la Licencia de Documentación
+      Libre GNU, versión 1.3 o cualquier versión posterior publicada
+      por la \emph{Free Software Foundation}; sin secciones
+      invariantes. Una copia de esta licencia esta incluida en el
+      apéndice titulado \hyperlink{chap:GFDL}{«GNU Free Documentation
+        License»}.
+
+    \smallskip
+    Muchos de los nombres usados por las compañías para diferenciar
+    sus productos y servicios son reclamados como marcas
+    registradas. Allí donde estos nombres aparezcan en este documento,
+    y cuando el autor haya sido informado de esas marcas registradas,
+    los nombres estarán escritos en mayúsculas o como nombres propios.
+  \end{singlespace}
+  \end{minipage}
+  %%\pageref{licensemini}
+}
+
+\newcommand{\jury}{%
+%%\thispagestyle{empty}
+  %%\vspace*{2cm}
+  \cleardoublepage
+  \noindent\underline{\textbf{{\Large TRIBUNAL:}}}
+  \vspace{1.0cm}
+  \par
+  \textbf{{\large Presidente:}} \\ \par
+  \textbf{{\large Vocal 1:}} \\ \par
+  \textbf{{\large Vocal 2:}} \\ \par
+  \textbf{{\large Secretario:}} \\ \par
+  \vspace{2.2cm}
+  \noindent\underline{\textbf{{\Large FECHA DE DEFENSA:}}} \par
+  \vspace{2.2cm}
+  \noindent\underline{\textbf{{\Large CALIFICACIÓN:}}} \par
+  \vspace{3.6cm}
+  \textbf{PRESIDENTE \hfil VOCAL 1 \hfil VOCAL 2 \hfil SECRETARIO} \par
+  \vspace{3.1cm}
+  Fdo.: \hfil Fdo.: \hfil Fdo.: \hfil Fdo.: \par
+}
+
+\newcommand{\copyrightpage}{%
+\pagestyle{plain} 
+%%\thispagestyle{empty}
+\mbox{}
+  \begin{singlespace}
+    \pagestyle{plain} 
+    \null \vfill \noindent
+    \textbf{\cauthors} \par
+    \smallskip \noindent
+    \mcity\ -- \country \par
+    \medskip \noindent
+    \ifthenelse{\NOT \isundefined{\memail}}{\parbox{4em}{\emph{E-mail:}}\memail\\}{}
+    %%\parbox{4em}{\emph{Teléfono:}}\mphone\\
+    \parbox{4em}{\emph{Web site:}}{\small \url{\mhomepage}} \\
+    
+    \bigskip \noindent
+    \copyright \ \year \cauthors \par
+    \smallskip \noindent
+    \pagestyle{plain} 
+    \begin{minipage}{0.8\textwidth} \raggedright \footnotesize
+      \license
+    \end{minipage}
+  \end{singlespace}
+}
+
+% -- símbolos
+\usepackage{pifont}
+\usepackage{tipa}
+
+
+%% -- letras capitales
+\usepackage{lettrine}
+\newcommand{\drop}[2]{%
+  \lettrine[lines=2,findent=2pt,nindent=3pt,loversize=0.1]% lhang=0.33
+  {\textcolor[gray]{0.4}{#1}}{#2}%
+  }
+  
+
+\newcommand{\dedication}[1]{%
+  \null\vspace{\stretch{1}}
+  \begin{flushright}
+    \textit{#1}
+  \end{flushright}
+  \vspace{\stretch{2}}\null
+}
+ 
+\newcommand{\quoteauthor}[1]{\par\hfill#1\hspace{1em}\mbox{}\cleardoublepage}
+
+\newcommand{\blankpage}
+{
+    \begin{titlepage}
+		\fancyhf{}
+		\newpage
+		\mbox{}
+	\end{titlepage}
+}
+
+%%\newcommand{\quoteauthor}[1]{\par\hfill#1\hspace{1em}\mbox{}}
+
+% imprime: "Object Oriented (OO)"
+\newcommand{\acx}[1]{\acused{#1}\acs{#1} %
+  \nolinebreak[3] %
+  (\acl{#1})}
+
+\newcommand{\Acro}[2]{\acro{#1}{#2}\acused{#1}}
+\newcommand{\sigla}[1]{\textsc{\textscale{.85}{#1}}}
+
+
+\usepackage{tocbibind}
+
+
+%%\setlength{\parskip}{4ex}
+\setlength{\parskip}{20pt plus 10pt minus 1pt}
+
+%% Load always as last package for avoid
+%% Warning with footnotes: “name{Hfootnote.xx} has been referenced but does not
+% exist”
+\usepackage{hyperref} 
+\usepackage{appendix}
+
+\renewcommand{\appendixname}{Apéndices}
+\renewcommand{\appendixtocname}{Apéndices}
+\renewcommand{\appendixpagename}{Apéndices}
+
+
+
+
+% Local Variables:
+% coding: utf-8
+% mode: latex
+% TeX-master: "main"
+% mode: flyspell
+% ispell-local-dictionary: "castellano8"
+% End:

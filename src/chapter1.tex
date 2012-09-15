@@ -1,0 +1,235 @@
+% -*- coding: utf-8 -*-
+\mainmatter
+\chapter{Introducción}
+\thispagestyle{fancy}
+\setcounter{page}{1}
+
+\drop{L}{a}  distribución de la información ha sido un problema a resolver
+desde antaño. Desde los primeros mensajes emitidos vía oral, pasando
+por escritos hasta la forma más novedosa que ha logrado el ser humano, como
+es internet, la complejidad relativa a las necesidades de comunicación ha ido en
+aumento.
+
+Con los nuevos tiempos, se ha hecho necesario transmitir esa información de
+forma general y distribuida. La mayor parte de esta información es
+procesada con ayuda de aplicaciones, cuya distribución y
+configuración debe ser abordada previamente de forma específica a
+nivel hardware y software con configuraciones generales y a cierto nivel de
+detalle con personalizaciones.
+
+La técnica inicial de distribución de software fue en principio únicamente
+física. Tiendas especializadas en puntos muy concretos de un país, hacían
+posible comprar una aplicación y usarla.
+\acresetall
+Con el avance de la tecnología, se ha conseguido poder descargar desde páginas
+especializadas de forma directa mediante el protocolo \acs{FTP}\label{acro:FTP}
+hasta redes \acs{P2P}\label{acro:P2P} empleando Bittorrent.
+
+Normalmente estos modelos son generales y no se adaptan a las necesidades
+específicas de personalización de ciertas organizaciones. Es necesario por
+tanto, un modelo, en el que una organización o empresa pueda definir unos 
+parámetros base generales y otros parámetros específicos para distribuir 
+su software y configurarlo a medida de sus usuarios finales.
+
+En esta solución, puede verse una gran utilidad para configuraciones de
+\acs{POI}\label{acro:POI}s donde un usuario, pueda interactuar y conseguir
+la distribución de software necesaria en un entorno determinado.
+
+\newpage
+
+\section{\uppercase{Qué es la distribución de software}}
+
+La distribución del software vista como un servicio distribuido, necesita ser
+rápida, escalable y robusta. Según ~\cite{LiB11} se trata de realizar
+un modelo que se ajuste al software y a ningún otro requisito adicional, para
+que la distribución sea tan sencilla y limpia que no sea posible cometer fallos
+derivados. Este tipo de modelo general puede utilizarse en multitud de sectores,
+como en el financiero, militares, médico, logístico, etc.
+
+Fundamentalmente se trata de mejorar la forma de integrar y enviar datos y
+aplicaciones, evitando cruzar los límites del costo del desarrollo de vida de
+una aplicación, incluyendo el desarrollo, pruebas, integración, mantenimiento y
+actualizaciones.
+
+Los mensajes y aplicaciones enviadas por \acs{P2P} tienen una baja latencia y un
+alto rendimiento, junto una alta disponibilidad, aunque pueden tener asociada
+una pérdida de confiabilidad en los mensajes y suelen requerir un gran costo
+de computación en servidores.
+De este modo son una alternativa muy utilizada, cuando ciertos problemas
+derivados de la pérdida de datos o ruido no son críticos en el dominio de
+explotación.
+
+Eliminando la complejidad de la conectividad punto a punto, se puede conseguir
+un sistema escalable y robusto.
+
+Para la distribución de software un aspecto clave es la interoperabilidad y la
+\acf{QoS}. Garantizar la transmisión de cierta cantidad de
+información en un tiempo determinado (\emph{throughput}) es una condición
+relevante para un servicio de calidad. Este requisito resulta especialmente
+importante en aplicaciones que requieren transmisión de vídeo o voz.
+
+Un modelo dirigido por eventos o en tiempo real, permiten definir una
+arquitectura orientada a servicios eficiente.
+
+\newpage
+
+\section{\uppercase{Introducción histórica}}
+
+La distribución de software fue un gran reto no hace muchos años. En sus
+inicios, un usuario necesitaba ser probablemente un experto en el
+dominio\cite{ReJ12} para poder obtener una copia funcional del software 
+requerido.
+
+Por ejemplo, las primeras distribuciones GNU/Linux requerían tener conocimientos
+avanzados en gestión de Sistemas, conociendo las bibliotecas y ejecutables
+que eran necesarios para construir el sistema y conseguir finalmente un sistema
+operativo funcional.
+
+Los detalles específicos de configuración hacían
+abandonar a muchas personas en esta tarea. Aunque el crecimiento de la comunidad
+y el esfuerzo compartido llevaron a construir herramientas para construir sistemas
+\acs{GNU}\label{acro:GNU}, más conocidas como las Autotools. Con una colección
+de herramientas diseñadas para hacer la vida más fácil en la distribución de 
+aplicaciones, los costes de tiempo se redujeron y se consiguió realizar
+paquetes de aplicaciones más portables a otros sistemas compatibles con Unix.
+
+Por tanto, se facilito al usuario final la posibilidad de recibir su propio
+software empaquetado o realizar modificaciones sobre el mismo, habilitando
+algunos parámetros sencillos en sus configuraciones.
+
+La distribución de software en Berkeley con el sistema operativo BSD,
+debe sus siglas a Berkeley Software Distribution. En las décadas de los setenta
+y ochenta, la Universidad Berkeley se propuso compartir y
+adaptar su software desde que la compañía ATT
+retiró el permiso para usos comerciales. Debido a la demanda de un
+gran público, el proceso de distribución de software fue una gran tarea a
+considerar. Los usuarios demandaban personalizaciones y varias ramificaciones
+del mismo proyecto surgieron como: OpenBSD, FreeBSD, SunOS, etc.
+    
+Estos hitos llevaron a hacer software escalable para un uso amplio. La
+distribución del software empezó a convertirse en un conjunto de actividades
+interrelacionadas que permitían producir o consumir sistemas necesarios para
+producción.
+
+La distribución por tanto incluye un proceso de obtención de software,
+instalación, activación/desactivación, adaptación o actualización, integración,
+seguimiento de cambios y desinstalación.
+
+\section{\uppercase{Problemática}}
+
+Los problemas derivados de la distribución en POI, conllevan grandes
+requerimientos de ancho de banda entre servidor/es y posibles
+clientes\cite{New10}. Si la red en la que se intenta distribuir cuenta con un
+número elevado de usuarios, o se hace un uso intenso de los recursos puede
+conllevar un mal funcionamiento del sistema\cite{Hel00}.
+
+Los costes de los equipos suelen ser elevados (normalmente los
+servidores) al igual que sus interconexiones.
+
+Como problema derivado, el sistema necesita disponer de una determinada
+homogeneización de componentes tanto hardware como software, para que habilite
+una forma rápida y segura de hacer cambios de manera dinámica y evitar problemas
+con diferentes versiones ejecutadas.
+
+Las actualizaciones a menudo, requieren de personal cualificado con un buen
+criterio estratégico que administren las prioridades necesarias para
+que un software esté plenamente funcional con las últimas novedades sin
+comprometer al sistema.
+
+Las dificultades más comunes son la parametrización de atributos más adecuada
+para el trabajo específico del usuario. El desarrollo para múltiples
+plataformas, la interconexión robusta entre clientes y servidores y la
+disponibilidad online del servicio y calidad del mismo.
+
+\textbf{Solución general}
+
+Las soluciones que se pueden aportar pasan por la difusión de software
+empleando el método multicast \cite{Wil99} en el que se optimiza el ancho de
+banda requerido del envío de la información.
+
+Con esta solución, se optimiza la red con múltiples destinos, que reciben los
+datos de forma simultánea con la estrategia más eficiente.
+
+\newpage
+
+Además se contempla implícitamente que el número de
+incidencias recibidas en el centro de soporte anterior debe reducirse al
+distribuir de forma más eficiente software específico vitales para la organización.
+
+Para mitigar estos problemas, se propone el desarrollo de este Proyecto de Fin
+de Carrera, FreeStation, cuyo objetivo general puede ser descrito como la
+definición de una Plataforma para el desarrollo de sistemas de distribución de
+software libre en puntos de información. La arquitectura modular y extensible de
+\emph{FreeStation} permiten su cómoda adaptación a las necesidades específicas
+de cada organización, facilitando al usuario final la obtención de software (o
+datos) específicos a cada dominio de explotación específico.
+
+El presente de Proyecto de Fin de Carrera debe basarse en una arquitectura
+modular y extensible para añadir características nuevas o mejorar las ya
+presentes.
+
+Se entiende que poco a poco, de forma progresiva y con la ayuda del resultado de
+estos primeros proyectos, se procederá a pensar en esta plataforma como medio
+adicional de distribución de aplicaciones diseñadas a medida o de forma
+generalizada, cuyo coste de mantenimiento y atención es muy inferior cuando se administra de modo
+distribuido.
+
+\section{\uppercase{Estructura del documento}}
+
+Este documento se ha estructurado según las indicaciones de la normativa de
+proyectos de fin de carrera de la Escuela Superior de Informática de la
+Universidad de Castilla-La Mancha, empleando los siguientes capítulos:
+
+\textbf{Capítulo 1: Introducción}
+
+En este capítulo se ha realizado una breve introducción del ámbito en el que se encuadra
+FreeStation.
+
+\newpage
+
+\textbf{Capítulo 2. Objetivos}
+
+En este capítulo se desglosa y se describen la lista de objetivos y subobjetivos
+planteados para este Proyecto de Fin de Carrera.
+
+\textbf{Capítulo 3. Antecedentes}
+
+En este capítulo se hace un repaso a los conocimientos y áreas que ha sido
+necesario estudiar para el desarrollo de FreeStation, junto a los principales
+sistemas existentes relacionados.
+
+\textbf{Capítulo 4. Método de trabajo}
+
+En este capítulo se explica y se justifica la metodología escogida para el
+desarrollo de este sistema. Además se describen los recursos empleados, tanto
+hardware como software.
+
+\textbf{Capítulo 5. Arquitectura}
+
+En este capítulo se describen los aspectos más importantes relativos al diseño e
+implementación del sistema, detallando los problemas surgidos y las soluciones
+aportadas. El capítulo se centra en la clasificación de los módulos y submódulos
+que componen FreeStation, realizando una descripción ``\emph{top-down}'' desde un
+enfoque funcional hasta un nivel de detalle técnico y específico de cada uno de
+ellos.
+
+\textbf{Capítulo 6. Evolución y costes}
+
+En este capítulo se describe la evolución del sistema durante su período de
+desarrollo, detallando las etapas e iteraciones realizadas.
+
+Igualmente se aporta información relacionada con el coste económico, el análisis
+de rendimiento (\emph{profiling}), y una serie de comparativas con aplicaciones
+homólogas que no utilizan FreeStation, además de una encuesta realizada sobre su
+uso.
+
+\newpage
+
+\textbf{Capítulo 7. Conclusiones y propuestas}
+
+En este capítulo se hace un resumen a modo de conclusión del desarrollo y las
+metas alcanzadas. También se enumera una serie de líneas de trabajo futuro planteadas
+para continuar su desarrollo, y una conclusión personal.
+
+\newpage
+\thispagestyle{empty}

@@ -1,0 +1,158 @@
+% -*- coding: utf-8 -*-
+%%\mainmatter
+\cleardoublepage
+\chapter{Conclusiones y propuestas}
+\thispagestyle{fancy}
+%%\setcounter{page}{94}
+
+\section{\uppercase{Objetivos alcanzados}}
+
+Partiendo de los requerimientos iniciales, el enfoque aplicado propuesto en este
+proyecto de fin de carrera alcanza los resultados previstos.
+
+La aplicación tiene una funcionalidad completa en base a la especificación de
+objetivos inicial. Se ha desarrollado por completo el concepto origen del
+proyecto de fin de carrera y se han utilizado todas las tecnologías inicialmente previstas. Esto ha sido posible gracias a
+la independencia de un modelo específico y la
+reusabilidad de bibliotecas y aplicaciones existentes.
+
+En el lado cliente se han finalizado los principales módulos esenciales como
+Watchdog, tratamiento de un conjunto suficientemente amplio de widgets y el
+módulo de comunicación con el servidor.
+
+El sistema permite la generación dinámica de interfaces complejas según los
+requisitos especificados por el cliente de forma precisa. Los datos son
+fácilmente exportables con configuraciones basadas en un esquema XML.
+
+Gracias a este enfoque se consigue un alto nivel de adaptabilidad, permitiendo
+la futura realización de mejoras internas, adaptándose al desarrollo de
+bibliotecas y aplicaciones de terceros. Por otro lado, el componente servidor
+funciona perfectamente con la conexión de backend a clientes mediante \acs{ICE} y utiliza el frontend web
+basado en PHP facilitando la administración web.
+
+\newpage
+
+Otro de los aspectos a destacar es la incorporación de nuevas tecnologías como
+CouchDB (ver sección ~\ref{sec:couchdbapache}), microfiber y widgets basados en
+HTML 5.
+
+El desarrollo del proyecto no sólo supondrá un beneficio directo para otros
+desarrolladores con similares propuestas, sino para usuarios que usen la
+aplicación a diario. En cualquier caso, es preciso tener en cuenta que en este
+proyecto de fin de carrera se han realizado casos funcionales de explotación a 
+modo de demostración del mismo. \emph{FreeStation} se ha desarrollado teniendo
+en cuenta su posición como herramienta útil, que permita el manejo y la gestión 
+de grandes volúmenes de información.
+
+Como parte de su objetivo se han tomado medidas de simplificación en tareas
+complejas para el usuario facilitando el proceso de interacción del mismo a
+través del diseño de interfaces naturales (NUI) (ver sección
+~\ref{sec:interfazNUI}). Gran parte de estas interfaces son generadas
+dinámicamente siguiendo una especificación definida por la aplicación.
+
+Todo los objetivos y subobjetivos han sido cumplidos adecuadamente. Una de las
+partes clave en \emph{FreeStation} es la adaptabilidad de para los requisitos
+de una organización. La robustez del sistema permite la recuperación de errores mediante el
+subsistema de \emph{Watchdog} visto en la sección ~\ref{sec:watchdog}.
+
+Las tecnologías que se utilizan en el proyecto de fin de carrera ayudan a
+homogeneizar el software a través del diseño modular del sistema. Su
+versatilidad permite la reutilización de componentes. El código de 
+\emph{FreeStation} se basa en buenos principios de diseño basados en el uso 
+de patrones implementando varios de ellos (ver sección ~\ref{sec:patrones}). El
+sistema basado en programación distribuida permite cumplir los objetivos de un 
+software actualizable y distribuido usando el framework ICE (ver sección
+~\ref{sec:ZeroICE}). 
+
+Por último, \emph{FreeStation} basa su desarrollo en software y estándares
+libres lo que permite posible continuación a otras personas interesadas.
+
+\newpage
+
+\section{\uppercase{Propuestas de trabajo futuro}}
+
+El desarrollo de FreeStation ha completado una arquitectura completa para la
+definición dinámica de POIs específicos para la distribución de software. Sin
+embargo, el proyecto tiene grandes ambiciones futuras y se proponen 
+futuras propuestas que permitan mejorar y adaptar las herramientas a nuevos
+desarrollos o incluso adaptarlas a las características específicas de un equipo
+de trabajo.
+
+A continuación se enumeran algunas de las líneas de trabajo futuras propuestas:
+
+\begin{itemize}
+     \item \textbf{Ampliación de widgets}:\\
+     El desarrollo de widgets actuales puede ser ampliado y ofrecer un gran catálogo
+    de widgets adicionales. Explotar la posibilidad de funcionalidades basadas
+    en 3D con widgets basados en OpenGL e investigar widgets más útiles para
+    el público general. Los widgets basados en sonidos de música ambientes o
+    en combinación con efectos visuales pueden ser útiles para el modo idle de
+    un POI. En definitiva, se pretende buscar formas de mejorar los widgets
+    actuales y añadir widgets novedosos. Como ayuda se pueden realizar 
+    encuestas a organizaciones para conocer sus necesidades prioritarias 
+    en sus POIS particulares. 
+    Estimación de tiempo: 2-3 meses
+    
+    \item \textbf{Sustitución del almacenamiento de datos para widgets}:\\
+    El modelo de almacenamiento de datos utilizado es XML.
+    Éste podría ser sustituido por una base de datos. El patrón MVC permite 
+    modificar el modelo de datos sin afectar al resto de componentes. La
+    información podría ser guardada en una base de datos sqlite debido a la poca
+    necesidad de usuarios concurrentes en un mismo POI. Es de suma importancia
+    la gestión que realiza con los datos y por tanto debe asegurarse las mismas
+    condiciones de fiabilidad y tiempo de procesado. 
+    Estimación de tiempo: 1-2 meses
+    
+    \item \textbf{Incorporar un caso de explotación con localización de
+    idiomas}:\\
+    Como se comentó en la sección ~\ref{sec:selectlanguage} la incorporación de
+    un selector de idiomas en un POI beneficia mucho su adaptación y permite llegar a
+    un mayor número de personas.
+    La realización de un widget o una adaptación sobre HTML4 y CouchDB (véase
+    sección ~\ref{sec:couchdbapache}) sería modular para reutilización en otros
+    POIs. Es necesario buscar un equilibrio en el número de idiomas ofrecidos al
+    público del usuario. La estimación de 3 a 5 idiomas en la mayor parte de los
+    casos podría ser util.
+    Estimación: 1-2 meses.
+
+\end{itemize}
+
+\newpage
+
+\section{\uppercase{Conclusión personal}}
+
+La realización del proyecto de fin de carrera me ha permitido llevar a cabo un
+proyecto real e investigación de nuevas tecnologías y diferentes enfoques de
+resolución de problemas.
+
+El tiempo destinado ha sobrepasado el inicialmente requerido, pero ello me
+ha permitido desarrollar mejores conceptos y soluciones a través de iteraciones
+progresivas en el mismo.
+
+De la realización del proyecto se desprende el gran potencial que disponen
+algunas nuevas tecnologías emergentes, en particular basadas en el ámbito
+web y en combinación con las aplicaciones de escritorio regulares.
+
+Gracias a que la gran mayoría del software
+utilizado este proyecto ha sido basado en software libre se ha podido estudiar
+profundamente su funcionamiento y incorporar mejoras y contribuciones cuando ha
+sido posible a la comunidad.
+
+El coste económico del proyecto es viable incluso para pequeñas instituciones o
+empresas que requieran en un futuro el uso de las aplicaciones desarrolladas.
+La labor de desarrollo afrontada compensa con la ganancia en productividad que
+puede llegar a retornar a los usuarios.
+
+Las aproximaciones de prototipos y posteriores desarrollos fueron los más
+óptimos e inmediatos para comenzar a esbozar el proyecto, su ciclo posterior de
+desarrollo ha tenido un mayor esfuerzo, pero ha permitido llevar a cabo una labor
+proyecto completo de ingeniería resolviendo problemas.
+
+Como conclusión final podemos afirmar que este proyecto satisface las especificaciones 
+iniciales, pero deja abierto un amplio abanico de ampliaciones e implantaciones futuras.
+
+%% Put a blank page for open next chapter on right page side
+%%\newpage
+%%\mbox{}
+%%\thispagestyle{empty}
+\cleardoublepage

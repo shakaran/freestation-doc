@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>10</x>
+      <y>500</y>
+      <w>210</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;WidgetXMLFileNotFound&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>300</x>
+      <y>500</y>
+      <w>200</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;WidgetXMLBadFormed&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>220</x>
+      <y>440</y>
+      <w>180</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;160;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>80</x>
+      <y>440</y>
+      <w>190</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>170;30;30;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>180</x>
+      <y>440</y>
+      <w>160</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;FSBaseException&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>220</x>
+      <y>380</y>
+      <w>50</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>200</x>
+      <y>380</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Exception&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>10</x>
+      <y>60</y>
+      <w>490</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;WidgetLoader(object)&gt;&gt;
+freestation::widget_loader
+{Cargador de widgets XML}
+--
+- __gtype_name__
+- __name__
+--
+/+ __init__(self : WidgetLoader): none /
+/- _load_xml(self : WidgetLoader): none /
+/+ get_document_element(self : WidgetLoader): none /
+/- _read_data(self : WidgetLoader): none  /
+/- _filter_element_nodes(self : WidgetLoader, 
+main_node : object, node_name : string): object /
+/- _read_child_nodes(self : WidgetLoader): none /
+/+ get_widgets(self : WidgetLoader): string /
+--
+Responsabilidades
+- Inicialización de widgets
+- Lector XML
+- Tratamiento de errores
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>230</x>
+      <y>10</y>
+      <w>50</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>220</x>
+      <y>10</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;object&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>430</x>
+      <y>340</y>
+      <w>50</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;30;30;160</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>20</x>
+      <y>340</y>
+      <w>50</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;30;30;160</additional_attributes>
+  </element>
+</diagram>

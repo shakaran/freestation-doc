@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>140</y>
+      <w>180</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;ClientStatusDisabled&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>190</x>
+      <y>140</y>
+      <w>160</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;NoAuthorized&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>160</x>
+      <y>60</y>
+      <w>130</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;110;80</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>70</x>
+      <y>60</y>
+      <w>140</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120;30;30;80</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>120</x>
+      <y>60</y>
+      <w>160</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;FSBaseException&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>160</x>
+      <y>0</y>
+      <w>50</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>140</x>
+      <y>0</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Exception&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

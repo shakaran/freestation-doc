@@ -1,0 +1,90 @@
+% -*- coding: utf-8 -*-
+\cleardoublepage
+\chapter{Objetivos}
+\thispagestyle{fancy}
+%%%\setcounter{page}{17}
+
+\section{\uppercase{Objetivo principal}}
+
+\drop{E}{l} objetivo principal de este proyecto fin de carrera es crear una
+plataforma con la que construir, desarrollar y desplegar sistemas de
+distribución de software libre de una organización adaptados a sus 
+necesidades.
+
+Los usuarios, a través de terminales de acceso con interfaces de manipulación
+directa, podrán solicitar entre un catálogo de software disponible y realizar
+operaciones para cumplir sus los objetivos de forma rápida y
+segura.
+
+Para la consecución de este objetivo funcional general, se han identificado una
+serie de requisitos no funcionales que se resumen a continuación:
+
+\begin{itemize}
+    \item{Identificar y recoger los requisitos de la aplicación para dar
+    comienzo a la fase de desarrollo.}
+    \item{Realizar un estudio del panorama actual sobre distribución de software en
+    puntos de interés.}
+    \item{Analizar las diferentes tecnologías para la creación de una aplicación web:
+    Entornos de desarrollo, bases de datos, lenguajes de programación,
+    frameworks, bibliotecas y navegadores.}
+    \item{Creación de la aplicación web con los requisitos anteriormente
+    identificados y siguiendo la metodología de la XP.}
+\end{itemize}
+
+\newpage
+
+\section{\uppercase{Subobjetivos}}
+
+El objetivo general descrito anteriormente será alcanzado en base al 
+cumplimiento de una serie de subobjetivos funcionales y no funcionales 
+que se describen a continuación:
+\begin{itemize}
+  
+    \item{\textbf{Adaptabilidad}. El sistema debe permitir trabajar con
+    diferentes configuraciones con respecto al número de nodos de la organización, así 
+    como de los requisitos particulares de cada uno de ellos. La diversidad de 
+    requisitos deberá estar presente desde el inicio del proyecto, facilitando 
+    la adaptación y ampliación a nuevas necesidades.}
+
+    \item{\textbf{Robustez}. El sistema debe ser muy robusto, y deberá contar
+    con mecanismos para el control y recuperación de errores, para garantizar su 
+    correcta puesta en explotación en un entorno real\cite{Dea98}. La plataforma 
+    facilitará el registro y la medición de datos de cada actividad desarrollada
+    en el sistema, para prevenir inconsistencia y avisar de posibles fallos 
+    producidos.}
+  
+   \item{\textbf{Heterogeneidad}. La plataforma se encargará de ofrecer una capa
+    de homogeneización del software que abstraiga de las propiedades específicas
+    del hardware utilizado en cada punto de información. El diseño modular del
+    sistema permitirá su utilización de forma legible y manejable, facilitando 
+    una correcta parametrización y reutilización de componentes. Un sistema
+    extensible, además permitirá una modificación fácil de su comportamiento sin
+    tener que realizar cambios en todo el sistema.}
+    
+    \item{\textbf{Distribuido}. El sistema se diseñará para minimizar el impacto
+    en el ancho de banda en red (evitando la transmisión de información 
+    redundante), permitiendo el despliegue de varios nodos, eliminando puntos 
+    únicos de fallo (\acs{SPOF}\label{acro:SPOF}) mediante el uso de componentes
+    y objetos distribuidos.}
+    
+    \item{\textbf{Diseño \acs{NUI}\label{acro:NUI}}. La plataforma estará
+    orientada a la puesta en explotación de sistemas basados en el paradigma
+    NUI, explotando de un modo eficiente las posibles capacidades de 
+    subsistemas de vídeo, audio y otros contenidos interactivos. El sistema
+    definirá un conjunto de widgets orientados a la manipulación directa.}
+    
+    \item{\textbf{Actualizable}. El sistema debe permitir la fácil 
+    actualización en todos los nodos del a organización de un modo 
+    automático. El impacto en tiempo para el usuario debe ser mínimo, de modo 
+    que las actualizaciones o cambios en nuevas versiones del software deben
+    realizarse de modo desatendido.}
+
+    \item{\textbf{Libre}. La plataforma estará basada en estándares libres. En 
+    el desarrollo del proyecto se utilizarán alternativas basadas en software 
+    libre y uso de estándares consensuados.}
+\end{itemize}
+
+%% Put a blank page for open next chapter on right page side
+%%\newpage
+%%\mbox{}
+%%\thispagestyle{empty}

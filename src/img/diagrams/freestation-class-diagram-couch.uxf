@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>5</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>25</x>
+      <y>50</y>
+      <w>330</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;UclmCouchDB&gt;&gt;
+freestation::widgets::UclmCouchDB
+{Controlador CouchDB}
+--
+-name : string
+-dbname : string
+-PAGE : string
+-proxy_bus : string
+-proxy_path : string
+-signals : []
+-enable_inspector : boolean
+
+--
+/+ __init__(self : UclmCouchDB) : none/
+/+ connect_hub_signals(self : UclmCouchDB, hub : HubFactory) : none/
+/+ on_copyusb(self : UclmCouchDB, hub : HubFactory, usb_data : []) : none/
+/+ load(self : UclmCouchDB, url : string) : none/
+/+ on_render_finished(self : UclmCouchDB, view : WebkitWebView) : none/
+/+ on_destroy(self : UclmCouchDB) : none/
+/+ on_idle(self : UclmCouchDB) : none/
+/+ set_env(self : UclmCouchDB, env : {}) : none/
+/+ on_loaded(self : UclmCouchDB, hub : HubFactory, data : string) : none/
+/+ on_get_description(self : UclmCouchDB, hub : HubFactory, data : string) : none/
+/+ on_fs_request(self : UclmCouchDB, hub : HubFactory, data : string, side : string) : none/
+/+ on_inspect(self : UclmCouchDB, inspector : WebkitWebView, view : WebkitWebView) : none/
+/+ on_reload(self : UclmCouchDB, button : string) : none/
+/+ on_futon(self : UclmCouchDB, button : string) : none/
+--
+Responsabilidades
+-- Gestionar eventos de usuario
+-- Comunicación con CouchDB
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>620</x>
+      <y>60</y>
+      <w>425</w>
+      <h>155</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;MountDetector&gt;&gt;
+freestation::widgets::MountDetector
+{Detector dispositivos USB}
+--
++MOUNT_SERVICE : string
+
+--
+
+/+ __init__(self : MountDetector, mount_info : MountInfo):
+/- _create_session_bus(self : MountDetector):
+/- _connect_signals(self : MountDetector):
+/- _check_service(self : MountDetector):
+/- _mount_added(self : MountDetector, sender : string, mount_id : int, data : string): none/
+/+ on_mount_added(self : MountDetector, disk_name : string, total_size : string, capacity : string, percent : string): none/
+/- _mount_removed(self : MountDetector, sender : string, mount_id : int, data : string): none/
+/+ on_mount_removed(self : MountDetector, sender : string, mount_id : int, data : string): none/
+/+ convert_bytes(self : MountDetector, bytes : integer): none/
+
+--
+Responsabilidades
+-- Detectición de dispositivos USB
+-- Envío de señales a capas superiores de software
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>25</x>
+      <y>330</y>
+      <w>240</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Inspector(Gtk.VBox)&gt;&gt;
+freestation::widgets::Inspector
+{WebKit web inspector}
+--
+--
+/+ __init__(self : Inspector, env : [}, view : WebkitWebview): none /
+/+ on_close(self : Inspector, button : object): none /
+--
+Responsabilidades
+-- Depuración de errores web
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>825</x>
+      <y>255</y>
+      <w>275</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Hub(GObjec.GObject):&gt;&gt;
+freestation::widgets::Hub
+{Detector dispositivos USB}
+--
+--
+
++ __init__(self : Hub, view : WebKitWebView):
++ recv(self : Hub, data : string):
++ send(self : Hub, signal : string, *args : {}):
+--
+Responsabilidades
+-- Gestionar eventos CouchDB
+-- Comunicación con CouchDB
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>825</x>
+      <y>390</y>
+      <w>165</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;DataProvider&gt;&gt;
+freestation::widgets::DataProvider
+{Proporcionador de datos}
+--
++ data : {}
+--
++ __init__(self : DataProvider): None
+--
+Responsabilidades
+-- Proporciona datos de secciones HTML
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>365</x>
+      <y>65</y>
+      <w>245</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;GUI(Gtk.Window)&gt;&gt;
+freestation::widgets::GUI
+{Interfaz GUI en GTK}
+--
+- __gtype_name__
+- __name__
++ DEFAULT_BACKGROUND
++ DEFAULT_BORDER_WIDTH
++ DEFAULT_WIDTH
++ DEFAULT_HEIGHT
++ uclm_demo_couch
+--
+/- __init__(self : GUI, application : FreeStationApp): none/
+/- __load_widgets(self : GUI): none/
+/- __pack_widgets(self : GUI): none/
+/- __connect_signals(self : GUI): none/
+/- __key_press_event(self : GUI, widget : object, event : string) : none/
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1025</x>
+      <y>370</y>
+      <w>80</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Microfiber&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>360</x>
+      <y>245</y>
+      <w>455</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Browser(Webkit.WebView)&gt;&gt;
+freestation::widgets::Browser
+{Controlador para navegador web}
+--
+/+ __gsignals__ : {}/
+--
+- __init__(self : Browser): none\
++ set_env(self : Browser, env : string): none\
++ set_recv(self : Browser, recv : string): none\
+- _on_notify_title(self : Browser, view : WebKitWebView, notify : string): none\
++ on_open(self : Browser, view : WebKitWebView, uri): none\
++ on_console_message(self : Browser, *args : string): none\
++ on_web_view_ready(self : Browser, view : WebKitWebView): none\
++ on_notification_cancel(self : Browser): none\
++ on_resource_loaded_from_memory_cache(self : Browser, web_view : WebKitWebView, web_frame, uri, web_error): none\
++ on_provisional_load_failed(self : Browser, web_view : WebKitWebView, web_frame : string, uri : string, web_error : string):
++ on_load_error(self : Browser, web_view, web_frame : WebKitWebView, uri : string, web_error : string): none\
++ on_create_webview(self : Browser, browser, web_frame : WebKitWebView): none\
++ on_load_finished(self : Browser, browser : WebKitWebView, web_frame : WebKitWebView): none\
++ on_notify_status(self : Browser, browser:  : WebKitWebView, uri : string):
++ on_notify_uri(self : Browser, browser : WebKitWebView, uri : string): none\
+- _on_load_status(self : Browser, view : WebKitWebView, browser : string): none\
++ populate_popup(self : Browser, view : WebKitWebView, menu : string): none\
+- _on_request(self : Browser, view : WebKitWebView, frame : string, resource : string, request : string, response : string): none\
++ on_resource_load_failed(self : Browser, view : WebKitWebView, frame : string, resource : string, reason : none : none\
++ on_resource_load_finished(self : Browser, view : WebKitWebView, frame : string, resource : string):
+- _on_reload(self : Browser): none\
+--
+Responsabilidades
+- Cargar y renderizar páginas webs
+- Invocar código HTML y Javascript
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1025</x>
+      <y>435</y>
+      <w>80</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;FactoryHub&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>135</x>
+      <y>295</y>
+      <w>60</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Gtk.VBox&gt;&gt;
+
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>150</x>
+      <y>300</y>
+      <w>24</w>
+      <h>39</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>15;15;15;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>435</x>
+      <y>210</y>
+      <w>85</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Webkit.WebView&gt;&gt;
+
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>455</x>
+      <y>215</y>
+      <w>24</w>
+      <h>39</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>15;15;15;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>450</x>
+      <y>35</y>
+      <w>80</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Gtk.Window&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>475</x>
+      <y>40</y>
+      <w>24</w>
+      <h>34</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>15;15;15;25</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>570</x>
+      <y>25</y>
+      <w>274</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>15;40;15;15;265;15;265;35</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>175</x>
+      <y>25</y>
+      <w>214</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>205;40;205;15;15;15;15;25</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>250</x>
+      <y>275</y>
+      <w>79</w>
+      <h>89</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>15;80;70;80;70;15</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>325</x>
+      <y>275</y>
+      <w>44</w>
+      <h>89</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>35;80;15;80;15;15</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>950</x>
+      <y>225</y>
+      <w>24</w>
+      <h>39</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>15;15;15;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>920</x>
+      <y>220</y>
+      <w>75</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;GObjec.GObject&gt;&gt;
+
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>875</x>
+      <y>330</y>
+      <w>24</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>15;60;15;15</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1025</x>
+      <y>405</y>
+      <w>80</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;main.js&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>985</x>
+      <y>330</y>
+      <w>49</w>
+      <h>129</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>40;120;15;120;15;15</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1000</x>
+      <y>330</y>
+      <w>34</w>
+      <h>59</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>25;50;15;50;15;15</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>990</x>
+      <y>330</y>
+      <w>44</w>
+      <h>94</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>35;85;15;85;15;15</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>785</x>
+      <y>210</y>
+      <w>59</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>15;35;15;15;50;15;50;45</additional_attributes>
+  </element>
+</diagram>

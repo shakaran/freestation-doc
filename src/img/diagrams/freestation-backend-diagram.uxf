@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>20</x>
+      <y>50</y>
+      <w>180</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Backend
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>30</x>
+      <y>80</y>
+      <w>70</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>API
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>110</x>
+      <y>80</y>
+      <w>70</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>.ice
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>10</x>
+      <y>20</y>
+      <w>480</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>FreeStationServer
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>210</x>
+      <y>50</y>
+      <w>270</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Frontend
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>10</x>
+      <y>280</y>
+      <w>480</w>
+      <h>470</h>
+    </coordinates>
+    <panel_attributes>FreeStationApp
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>40</x>
+      <y>340</y>
+      <w>80</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>CouchDB
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>20</x>
+      <y>540</y>
+      <w>460</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Frontend
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>30</x>
+      <y>570</y>
+      <w>190</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>GTK
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>30</x>
+      <y>620</y>
+      <w>190</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>WebKit
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>30</x>
+      <y>670</y>
+      <w>190</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>GStreamer
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>20</x>
+      <y>310</y>
+      <w>270</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Backend
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>150</x>
+      <y>480</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>WidgetLoader
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>310</x>
+      <y>340</y>
+      <w>160</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>.ice
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>150</x>
+      <y>360</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>DBus
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>40</x>
+      <y>350</y>
+      <w>50</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;50;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>50</x>
+      <y>400</y>
+      <w>60</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Hub
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>220</x>
+      <y>80</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>WidgetCore
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>340</x>
+      <y>140</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>ServerCore
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>30</x>
+      <y>160</y>
+      <w>150</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>MySQLDriver
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>250</x>
+      <y>570</y>
+      <w>90</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Browser
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>190</x>
+      <y>610</y>
+      <w>80</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;30;60;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>250</x>
+      <y>670</y>
+      <w>200</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>VideoArea
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>190</x>
+      <y>660</y>
+      <w>80</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;30;60;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>150</x>
+      <y>0</y>
+      <w>100</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;50;30;30;80;30;80;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>150</x>
+      <y>440</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Microfiber
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>80</x>
+      <y>350</y>
+      <w>90</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;70;70;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>150</x>
+      <y>400</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>DataProvider
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>80</x>
+      <y>390</y>
+      <w>90</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>70;70;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>80</x>
+      <y>390</y>
+      <w>90</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>70;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>300</x>
+      <y>310</y>
+      <w>180</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>FreeStationClient
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>150</x>
+      <y>320</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>MountDetector
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>370</x>
+      <y>570</y>
+      <w>80</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Inspector
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>310</x>
+      <y>610</y>
+      <w>80</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>60;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>40</x>
+      <y>400</y>
+      <w>50</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;30;30;80</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>30</x>
+      <y>480</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>FactoryHub
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>220</x>
+      <y>140</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>ClientCore
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>220</x>
+      <y>200</y>
+      <w>240</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>MySQLDriver
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>290</x>
+      <y>70</y>
+      <w>70</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;30;50;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>340</x>
+      <y>80</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>WidgetServer
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

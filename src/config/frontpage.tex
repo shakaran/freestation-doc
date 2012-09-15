@@ -1,0 +1,101 @@
+%%\begin{minipage}[c][5cm][c]{1em}   % Introduce espacio en blanco efectivo
+%%\end{minipage}
+
+%Portada
+%%%\pretitle
+\frontpage
+\jury
+
+%\thispagestyle{empty}
+\newpage
+\begin{minipage}[c][5cm][c]{1em}   % Introduce espacio en blanco efectivo
+\end{minipage}
+%\thispagestyle{empty}
+\newpage
+\cleardoublepage
+
+\copyrightpage
+
+%\thispagestyle{empty}
+\newpage
+%\thispagestyle{empty}
+\begin{minipage}[c][5cm][c]{1em}   % Introduce espacio en blanco efectivo
+\end{minipage}
+%\thispagestyle{empty}
+
+\input{src/thanks.tex}
+
+
+%\thispagestyle{empty}
+\newpage
+\begin{minipage}[c][5cm][c]{1em}   % Introduce espacio en blanco efectivo
+\end{minipage}
+%\thispagestyle{empty}
+\newpage
+
+\parskip=25pt
+\parindent=20pt
+
+\input{src/briefing.tex}
+
+\parskip=15pt
+\parindent=10pt
+%Índice
+%%\renewcommand{\contentsname}{New table of contents title}
+
+%% Aesthetic spacing redefines that look nicer to me than the defaults.
+
+\setlength{\cftbeforechapskip}{1ex}
+\setlength{\cftbeforesecskip}{0.3ex}
+
+%% Use Helvetica-Narrow Bold for Chapter entries
+
+\renewcommand{\cftchapfont}{%
+  \fontsize{11}{13}\usefont{OT1}{phv}{bc}{n}\selectfont
+}
+
+
+%%\thispagestyle{empty}
+\pagestyle{plain} 
+\tableofcontents
+%%\thispagestyle{empty}
+
+%\thispagestyle{empty}
+\cleardoublepage
+\pagestyle{plain}
+\listoftables
+
+\cleardoublepage
+\pagestyle{plain} 
+\listoffigures %% Listado de figuras (si las hay)
+
+\cleardoublepage
+\pagestyle{plain} 
+\renewcommand\lstlistingname{Listado de código fuente}
+\renewcommand\lstlistlistingname{Listados de códigos fuente}
+\def\lstlistingautorefname{Alg.}
+\lstlistoflistings %% Listado de códigos fuente (si las hay)
+
+\input{src/config/acronym.tex}
+
+\clearpage
+
+\thispagestyle{fancy}
+\parskip=25pt
+\parindent=20pt
+%%\thispagestyle{empty}
+
+\parskip=25pt
+\parindent=20pt
+\pagestyle{fancy}
+%%  left (L) on even (E) pages 
+% right (R) on odd (O) pages
+\fancyhead[LE,RO]{\slshape \rightmark} 
+\fancyhfoffset[EL,OR]{16pt}
+\renewcommand{\headrulewidth}{0.4pt} % grosor de la línea de la cabecera
+\renewcommand{\footrulewidth}{0.4pt} % grosor de la línea del pie
+
+%%\lfoot{\small{\csubject}}
+\cfoot{\small{\ctitle}}
+%% \rfoot{\small{\precsubtitle} \large Pág. \thepage}
+\fancyfoot[RO, LE] {Pág. \thepage}

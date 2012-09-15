@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>580</x>
+      <y>10</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Gtk.Window&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>630</x>
+      <y>20</y>
+      <w>50</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>410</x>
+      <y>70</y>
+      <w>510</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;GUI(Gtk.Window)&gt;&gt;
+freestation::widgets::GUI
+{Interfaz GUI en GTK}
+--
+- __gtype_name__
+- __name__
++ DEFAULT_BACKGROUND
++ DEFAULT_BORDER_WIDTH
++ DEFAULT_WIDTH
++ DEFAULT_HEIGHT
++ uclm_demo_couch
+--
+/- __init__(self : GUI, application : FreeStationApp): none/
+/- __load_widgets(self : GUI): none/
+/- __pack_widgets(self : GUI): none/
+/- __connect_signals(self : GUI): none/
+/- __key_press_event(self : GUI, widget : object, event : string) : none/
+--
+Responsabilidades
+- Inicialización GTK
+- Carga de widgets
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>120</x>
+      <y>10</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;threading.Thread&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>170</x>
+      <y>20</y>
+      <w>50</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>10</x>
+      <y>70</y>
+      <w>380</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;FreeStationApp(threading.Thread)&gt;&gt;
+freestation::freestationapp
+{Aplicación cliente FreeStation}
+--
+- __gtype_name__
+- __name__
+- _self
+--
+/+  __init__(self : FreeStationApp, 
+alive_time : boolean, enable_gui : boolean): none /
+/+ run(self : FreeStationApp): none /
+/+ destroy(self : FreeStationApp): none /
+/+ on_destroy(self : FreeStationApp, 
+widget : object, event : object): none /
+--
+Responsabilidades
+- Inicialización del cliente
+- Carga de GUI
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>330</x>
+      <y>10</y>
+      <w>130</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;60;30;30;110;30;110;60</additional_attributes>
+  </element>
+</diagram>

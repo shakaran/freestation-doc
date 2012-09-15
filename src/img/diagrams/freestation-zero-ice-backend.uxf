@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>776</x>
+      <y>288</y>
+      <w>408</w>
+      <h>296</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;ApiManager&gt;&gt;
+backend::ApiManager
+{Controlador API}
+--
++ current : Ice-Current
+--
+/+ __init__(self : ApiManager, server : object): none/
+/+ set_current(self : ApiManager, current : Ice-Current): none/
+/+ get_client_ip(self : ApiManager): string/
+/+ update_client_last_connection(self : ApiManager, ip : string): none/
+/+ update_client_requests(self : ApiManager, ip : string): none/
+/+ get_client_id(self : ApiManager, ip : string): integer/
+/+ get_client_request(self : ApiManager, ip : string): string/
+/+ check_authorized(self : ApiManager, ip : string): none/
+/+ is_authorized(self : ApiManager): boolean/
+/+ get_widgets_associated(self : ApiManager, client_id : integer): string/
+/+ get_widget_name(self : ApiManager, widget_id : integer): string/
+/+ generate_xml_widgets(self : ApiManager, ip : string): string/
+--
+Responsabilidades
+-- Gestionar llamadas a clientes
+-- Proporcionar datos de widgets
+-- Tratar con datos de persistencia
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>576</x>
+      <y>496</y>
+      <w>128</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;FSBaseException&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>536</x>
+      <y>496</y>
+      <w>112</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>96;24;24;64</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>608</x>
+      <y>448</y>
+      <w>40</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;48</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>592</x>
+      <y>448</y>
+      <w>88</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Exception&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>480</x>
+      <y>560</y>
+      <w>144</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;ClientStatusDisabled&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>632</x>
+      <y>560</y>
+      <w>128</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;NoAuthorized&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>608</x>
+      <y>496</y>
+      <w>104</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;88;64</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>568</x>
+      <y>48</y>
+      <w>552</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Api&gt;&gt;
+backend::Api
+{Adaptador de ICE slice}
+--
++ manager : ApiManager
+--
+/+ get_widgets(self : Api): string/
+/+ getXMLWidgets(self : Api, current : Ice-Current: string/
+/+ version(self : Api, current : Ice-Current: string/
+/+ getFile(self : Api, current = None, path : string): string/
+/+ getFileChunk(self : Api, path = None, pos : integer, size : integer, current : Ice-Current: string/
+/+ getFileSize(self : Api, path = None, current : Ice-Current: string/
+/+ isAuthorized(self : Api, current : Ice-Current: boolean/
+/+ getClientId(self : Api, current : Ice-Current: integer/
+--
+Responsabilidades
+-- Tratamiento slice Zero ICE
+-- Delegación de tareas a ApiManager
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>824</x>
+      <y>0</y>
+      <w>40</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;48</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>808</x>
+      <y>0</y>
+      <w>88</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;FS.Api&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>272</x>
+      <y>424</y>
+      <w>192</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;DBConfig&gt;&gt;
+backend::DBConfig
+{Configuración base de datos}
+--
++ MYSQL_SERVER     
++ MYSQL_USER       
++ MYSQL_PASS       
++ DEFAULT_DATABASE
+--
+Responsabilidades
+-- Proporcionar datos de 
+acceso a MySQL
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>328</x>
+      <y>552</y>
+      <w>672</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>656;32;656;72;24;72;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>568</x>
+      <y>288</y>
+      <w>192</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;States&gt;&gt;
+backend::States
+{Estados FreeStationServer}
+--
++ STANDBY     
++ CONNECTED       
++ BLOCKED       
++ PARK
+--
+Responsabilidades
+-- Representar estados
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>32</x>
+      <y>424</y>
+      <w>152</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Ice.ThreadNotification&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>8</x>
+      <y>472</y>
+      <w>208</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;ThreadLogger&gt;&gt;
+backend::ThreadLogger
+{Adaptador para Threads}
+--
+/+ __init__(self : ThreadLogger): None/
+/+ start(self : ThreadLogger): None/
+/+ stop(self : ThreadLogger): None/
+--
+Responsabilidades
+-- Registrar actividad
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>80</x>
+      <y>424</y>
+      <w>32</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;48</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>232</x>
+      <y>0</y>
+      <w>152</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Ice.Application&gt;&gt;
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>280</x>
+      <y>0</y>
+      <w>40</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;48</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>48</y>
+      <w>552</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;FreeStationServer&gt;&gt;
+backend::FreeStationServer
+{Servidor FreeStation}
+--
++ VERSION
++ ADAPTER_NAME
++ COMUNNICATOR_NAME
++ PORT
++ MODE
++ TIMEOUT
++ DEBUG
+--
+/+ __init__(self : FreeStationServer): none /
+/+ __str__(self : FreeStationServer): string /
+/+ __call__(self : FreeStationServer): none /
+/+ init_properties(self : FreeStationServer): none /
+/+ load_ice_interface(self : FreeStationServer): none /
+/+ show_communicator_properties(self : FreeStationServer): none /
+/+ show_endpoints_info(self : FreeStationServer): none /
+/+ create_adapter(self : FreeStationServer): none /
+/+ create_servant(self : FreeStationServer): none /
+/+ destroy(self : FreeStationServer): none /
+/+ start(self : FreeStationServer): none /
+/+ run (self : FreeStationServer, argv : []): none /
+--
+Responsabilidades
+-- Administración de servidor Zero C ICE
+-- Inicialización de configuración slice
+-- Inicializar API
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>192</x>
+      <y>384</y>
+      <w>72</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>24;152;56;152;56;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>488</x>
+      <y>384</y>
+      <w>160</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>144;40;144;56;24;56;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>528</x>
+      <y>560</y>
+      <w>464</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>448;24;448;56;24;56;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>672</x>
+      <y>560</y>
+      <w>312</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>296;24;296;48;24;48;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>496</x>
+      <y>8</y>
+      <w>120</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>104;40;104;24;24;24;24;40</additional_attributes>
+  </element>
+</diagram>
